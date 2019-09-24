@@ -1,30 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
+
 <head>
+
     <meta charset="UTF-8">
     <title>Flutter Dev Test</title>
     <style type="text/css">
-        html {
-            font-size: 40px;
+        .button {
+            background-color: lightskyblue;
+            /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+            margin: 4px 2px;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 4px;
+            margin: 2%
         }
 
+        hr {
+            border: 2px solid #987cb9;
+            border-radius: 1px;
+        }
     </style>
     <script type="text/javascript">
 
-        function testConsoleLog(){
+        function testConsoleLog() {
             console.log("console log message ^_^")
         }
 
-        function testAlert(){
+        function testAlert() {
             alert(navigator.userAgent)
         }
 
     </script>
 </head>
+
 <body>
-<span onclick="testAlert()">显示UA</span>
-<br/>
-<span onclick="testConsoleLog()">测试console log</span>
-<br/>
+
+    <button onclick="testAlert()" class="button">显示UA</button>
+    <br>
+    <button onclick="testConsoleLog()" class="button">测试console log</button>
+    <hr align="center" width="90%">
+
 </body>
+
 </html>
