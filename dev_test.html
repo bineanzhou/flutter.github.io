@@ -29,9 +29,19 @@
         }
     </style>
     <script type="text/javascript">
-
+        var isiOS = !!navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
         function testConsoleLog() {
-            console.log("console log message ^_^")
+            console.log(isiOS)
+            var actionData = "console log message ^_^";
+            if (isiOS) {
+                try {
+                    webkit.messageHandlers.JXiOS.postMessage(actionData)
+                } catch (error) {
+                    console.error('ios context not exist ')
+                }
+            } else {
+                console.log(actionData)
+            }
         }
 
         function testAlert() {
