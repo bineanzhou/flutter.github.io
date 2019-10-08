@@ -35,9 +35,9 @@
             var actionData = "console log message ^_^";
             if (isiOS) {
                 try {
-                    webkit.messageHandlers.JXiOS.postMessage(actionData)
+                    webkit.messageHandlers.JXiOS.postMessage(actionData);
                 } catch (error) {
-                    console.error('ios context not exist ')
+                    console.error('ios context not exist ');
                 }
             } else {
                 console.log(actionData)
